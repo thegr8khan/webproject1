@@ -1,0 +1,55 @@
+package amazon;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class LifecycleServlet extends HttpServlet{
+	
+	/**
+	 * 1st method to be called in the servlet.
+	 * Tomcat server when it is starting calls the init method
+	 * Any initialization code e.g. int i = 10, Employee e = new Employee();
+	 * Gets called only once
+	 */
+	@Override
+	public void init() throws ServletException {
+		
+	}
+	
+	
+	/**
+	 * Gets called everytime a client makes a request to your server
+	 * Request has a type = get, post, head, put, patch
+	 * if request = get, service() ----call----> doGet()
+	 * if request = post, service() ----call---> doPost()
+	 * request type is determined from each jsp page
+	 */
+	@Override
+	protected void service(HttpServletRequest arg0, HttpServletResponse arg1) throws ServletException, IOException {
+		
+	}
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+	}
+
+	
+	/**
+	 * Last method to be called by Tomcat server
+	 */
+	@Override
+	public void destroy() {
+		
+	}
+
+}

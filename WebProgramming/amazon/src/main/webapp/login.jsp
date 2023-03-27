@@ -1,0 +1,35 @@
+<html>
+
+<head>
+<!-- Import JavaScript files -->
+<!-- Import CSS files -->
+</head>
+
+<body>
+
+<%
+String loginError = (String)request.getAttribute("loginError");
+if(loginError!=null){
+%>
+
+<span style="color:red"><%=loginError %></span>
+
+<%
+}
+%>
+
+<form action="/amazon/cs" method="post">
+
+
+Username: <input type= "text" name="username"/>
+Password: <input type= "password" name="password"/>
+
+<input type="submit" name="action" value="Login"/>
+
+<input type="hidden" name="page" value="login"/>
+
+</form>
+
+</body>
+
+</html>

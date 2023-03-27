@@ -1,0 +1,20 @@
+<html>
+
+<head>
+<title>
+List of Items
+</title>
+</head>
+
+<body>
+
+<form action="/amazon/cs" method="post">
+
+This is the items.jsp page
+<input type="hidden" name="page" value="item"/>
+
+</form>
+
+</body>
+
+</html>

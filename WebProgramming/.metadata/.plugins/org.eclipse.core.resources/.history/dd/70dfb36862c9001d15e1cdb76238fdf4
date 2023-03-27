@@ -1,0 +1,18 @@
+<html>
+
+<head>
+<!-- Import Javascript files -->
+<!-- Import CSS files -->
+</head>
+
+<body>
+
+Username: <input type= 'text' name='textUsername'/>
+Password: <input type= 'password' name='txtPassword'/>
+
+<input type='submit' name='action' value='Login'/>
+
+
+</body>
+
+</html>

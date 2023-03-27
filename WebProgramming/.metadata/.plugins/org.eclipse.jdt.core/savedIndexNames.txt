@@ -1,0 +1,6 @@
+INDEX VERSION 1.131+C:\Users\MohNK\OneDrive - UNT System\Desktop\JavaTraining\WebProgramming\.metadata\.plugins\org.eclipse.jdt.core
+1233155433.index
+3501714628.index
+260503315.index
+1865797976.index
+867819308.index

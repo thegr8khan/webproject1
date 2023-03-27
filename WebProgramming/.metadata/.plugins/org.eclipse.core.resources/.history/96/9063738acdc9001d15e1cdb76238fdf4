@@ -1,0 +1,22 @@
+<html>
+
+<head>
+<!-- Import JavaScript files -->
+<!-- Import CSS files -->
+</head>
+
+<body>
+
+<form action="" method="post">
+
+
+Username: <input type= "text" name="username"/>
+Password: <input type= "password" name="password"/>
+
+<input type="submit" name="action" value="Login"/>
+
+</form>
+
+</body>
+
+</html>

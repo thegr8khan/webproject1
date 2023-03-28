@@ -22,13 +22,23 @@ if(loginError!=null){
 
 
 Username: <input type= "text" name="username"/>
+<br>
+<br>
 Password: <input type= "password" name="password"/>
-
-<input type="submit" name="action" value="Login"/>
+<br>
+<br>
+<input type="submit" name="action" value="Login">
+<input type="submit" name="action" value="Reset"/>
 
 <input type="hidden" name="page" value="login"/>
+<input type="hidden" name="page" value="Reset"/>
+
 
 </form>
+
+
+
+
 
 </body>
 

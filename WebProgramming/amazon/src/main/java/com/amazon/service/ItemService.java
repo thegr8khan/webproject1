@@ -17,4 +17,14 @@ public class ItemService {
 		
 		return items;
 	}
+	
+	public void addQuantity(int quantity) {
+		
+		Item item = new Item();
+		item.setQuantity(quantity);
+		item.getQuantity();
+		item.updatePrice();
+	}
+	
+	
 }

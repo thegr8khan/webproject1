@@ -1,3 +1,5 @@
 INDEX VERSION 1.131
 C:\Users\MohNK\OneDrive - UNT System\Desktop\JavaTraining\WebProgramming\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3915793619.index
 \amazon\src\main\java
+C:\Users\MohNK\Documents\GitHub\webproject1\WebProgramming\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3915793619.index
+\amazon\src\main\java

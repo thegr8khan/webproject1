@@ -1,0 +1,28 @@
+package com.amazon.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.amazon.domain.Item;
+
+public class ItemService {
+	
+	public List<Item> all() {
+		
+		List<Item> items = new ArrayList<>();
+		
+		items.add(new Item(1, "lamp", 33.33f));
+		items.add(new Item(2, "table", 66.66f));
+		items.add(new Item(3, "stool", 40.00f));
+		
+		return items;
+	}
+	
+	public void addQuantity(int quantity) {
+		
+		Item item = new Item();
+		item.setQuantity(quantity);
+		item.getQuantity();
+	}
+	
+}

@@ -1,0 +1,74 @@
+package com.amazon.web;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.amazon.service.ItemService;
+import com.amazon.service.LoginService;
+
+public class ControllerServlet extends HttpServlet{
+
+	private LoginService loginService;
+	private ItemService itemService;
+	
+	@Override
+	public void init() throws ServletException {
+		loginService = new LoginService();
+		itemService = new ItemService();
+	}
+	
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doPost(request, response);
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String nextPage="/login.jsp";
+		
+		String currentPage =request.getParameter("page");
+		String action = request.getParameter("action");
+		
+		
+		
+		if (currentPage != null) {
+			if(currentPage.equals("login")) {
+				
+				if (action != null && action.equalsIgnoreCase("Login")) {
+					//Read what the user entered in login.jsp
+					String username = request.getParameter("username");
+					String password = request.getParameter("password");
+					
+					System.out.println("username = " + username + " password = " + password);
+					
+					if (loginService.authenticate(username, password)) {
+						nextPage="/items.jsp";
+						request.setAttribute("items", itemService.all());
+					}else {
+						if (action != null && action.equalsIgnoreCase("Reset")) {
+							nextPage="/login.jsp";
+						} else {
+							nextPage="/login.jsp";
+							request.setAttribute("loginError", "Invalid username or password");
+						}	
+					}
+					
+					//Redirect to another page
+					RequestDispatcher rd = request.getRequestDispatcher(nextPage);
+					rd.forward(request, response);
+				}
+				
+			} else if (currentPage.equalsIgnoreCase("login") && currentPage.equals("reset")) {
+				
+			}
+		}
+		
+	}
+	
+}

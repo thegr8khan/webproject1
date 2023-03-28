@@ -58,10 +58,29 @@ public class ControllerServlet extends HttpServlet{
 					//Redirect to another page
 					RequestDispatcher rd = request.getRequestDispatcher(nextPage);
 					rd.forward(request, response);
+					
+					
+				} else if(action != null && action.equalsIgnoreCase("Reset")) {
+					nextPage="/login.jsp";
+					RequestDispatcher rd = request.getRequestDispatcher(nextPage);
+					rd.forward(request, response);
 				}
 				
-			} else if (currentPage.equalsIgnoreCase("login")) {
-				
+			} 
+			
+			else if (currentPage.equalsIgnoreCase("items")) {
+				if (action != null && action.equalsIgnoreCase("Add to Cart")) {
+					String quantity = request.getParameter("quantity");
+					itemService.addQuantity(Integer.parseInt(quantity));
+					nextPage="/items.jsp";
+					RequestDispatcher rd = request.getRequestDispatcher(nextPage);
+					rd.forward(request, response);
+					
+				} else if(action.equalsIgnoreCase("Checkout")) {
+					nextPage="/summary.jsp";
+					RequestDispatcher rd = request.getRequestDispatcher(nextPage);
+					rd.forward(request, response);
+				}
 			}
 		}
 		
